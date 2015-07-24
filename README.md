@@ -8,6 +8,7 @@ Client-side:
 - JSX, JS2015, LESS
 - browserify, gulp
 - flux
+- React-Router
 
 Server-side:
 - SSR reactJS
