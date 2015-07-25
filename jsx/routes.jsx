@@ -9,8 +9,13 @@ var Route = Router.Route,
     NotFoundRoute = Router.NotFoundRoute;
 
 var routes = (
-<Route name="Home" path="/" handler={App}></Route>
-
+<Route path="/" handler={App}>
+  <Route name="Profile" path="profile" handler={} />
+  <Route name="Sign Up" path="sign-up" handler={} />
+  <Route name="Log In" path="log-in" handler={} />
+  <Route name="Home" path="home" handler={} />
+  <NotFoundRoute handler={} />
+</Route>
 );
 
 module.exports = routes;
