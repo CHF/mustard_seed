@@ -10,7 +10,9 @@ var Route = Router.Route,
 
 var routes = (
 <Route path="/" handler={App}>
-  <Route name="Profile" path="profile" handler={} />
+  <Route name="Profile" path="profile" handler={}>
+    <Route name="Settings" path="settings" handler={} />
+  </Route>
   <Route name="Sign Up" path="sign-up" handler={} />
   <Route name="Log In" path="log-in" handler={} />
   <Route name="Home" path="home" handler={} />
