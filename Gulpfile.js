@@ -24,7 +24,7 @@ var gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   watchify = require('watchify');
 
-var buildDirectory = './server/public';
+var buildDirectory = './public/js';
 
 
 gulp.task('mocha', function() {
@@ -44,10 +44,7 @@ var customOpts = {
   entries: ['./jsx/browser.jsx'],
   debug: true,
   extensions: ['.js', '.es6.js', '.jsx'],
-  transform: ['babelify'],
-  poll: true,
-  cache: {},
-  packageCache: {},
+  transform: ['babelify']
 };
 var opts = assign({}, watchify.args, customOpts);
 var b = watchify(browserify(opts));
