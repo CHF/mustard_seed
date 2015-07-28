@@ -23,8 +23,23 @@ app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
-app.use('/users', users);
+var Router = require('react-router'),
+  React = require('react'),
+  routes = require('../jsx/routes');
+
+
+app.use("/assets", express.static(__dirname + '/public'));
+
+var Router = require('react-router'),
+  React = require('react'),
+  routes = require('../jsx/routes');
+
+app.use((req, res) => {
+  Router.run(routes, req.path, (Root, state) => {
+    res.send('<!DOCTYPE html>' + React.renderToString(<Root/>));
+  });
+});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
