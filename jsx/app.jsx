@@ -1,11 +1,11 @@
 var React = require('react/addons'),
     Router = require('react-router'),
+    Head = require('./meta/head'),
+    Scripts = require('./meta/scripts');
 
-    Head = require('./meta/Head'),
-    actions = require('./actions/actions'),
-    Footer = require('./shared/Footer');
+    //Footer = require('./shared/Footer');
 
-var RouteHandler = Router.RouteHandler;
+var Portal = Router.RouteHandler;
 
 var {Grid, Row, Col} = require('react-bootstrap');
 
@@ -17,15 +17,13 @@ var App = React.createClass({
         <Head/>
         <body>
           <Grid fluid={true}>
-            <Navigation/>
             <Row>
               <Col xs={12}>
-                <RouteHandler/>
+                <Portal/>
               </Col>
             </Row>
-            <Footer/>
           </Grid>
-          <AppScripts/>
+          <Scripts/>
         </body>
       </html>
       );

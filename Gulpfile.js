@@ -15,7 +15,6 @@ var gulp = require('gulp'),
   path = require('path'),
   plumber = require('gulp-plumber'),
   pngquant = require('imagemin-pngquant'),
-  reload = browserSync.reload,
   runSequence = require('run-sequence'),
   s3 = require("gulp-s3"),
   source = require('vinyl-source-stream'),
@@ -115,7 +114,7 @@ gulp.task('styles', function() {
       compatibility: 'ie8',
       debug: true
     }))
-    .pipe(gulp.dest(buildDirectory + '/styles/'));
+    .pipe(gulp.dest(__dirname + '/public/stylesheets'));
 
 });
 

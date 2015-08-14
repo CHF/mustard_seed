@@ -8,14 +8,15 @@ var Route = Router.Route,
   NotFoundRoute = Router.NotFoundRoute;
 
 var Login = require('./login/components/login-form');
+var SignUp = require('./signup/components/signup-form');
 
 var routes = (
-  <Route handler={App} path="/">
+  <Route handler={App} name="Home" path="/">
     {/* <Route name="Profile" path="profile" handler={}>
     <Route name="Settings" path="settings" handler={} />
-    </Route>
-   <Route name="Sign Up" path="sign-up" handler={} />*/}
-    <Route  handler={Login} name="Log In" path="log-in"/>
+    </Route>*/}
+    <Route name="Sign Up" path="signup" handler={SignUp}/>
+    <Route name="Log In" path="login" handler={Login}/>
     {/* <Route name="Home" path="home" handler={} />
   <NotFoundRoute handler={} />*/}
   </Route>
