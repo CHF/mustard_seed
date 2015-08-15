@@ -25,13 +25,12 @@ var login = React.createClass({
 
 render() {
   return (
-    <Grid className="loginForm">
+    <Grid className="inputForm">
+      <Row><Col smOffset={2} mdOffset={3}><h1>Login</h1></Col></Row>
       <Row>
-        <Col xs={12} sm={8} md={6}>
-          <label for="login">Login</label>
+        <Col xs={12} sm={8} smOffset={2} md={6} mdOffset={3}>
             <Input
              type='text'
-             ref='input'
              value={this.state.value}
              placeholder='User Name'
              bsStyle={this.validationState()}
@@ -42,10 +41,9 @@ render() {
       </Row>
 
       <Row>
-        <Col xs={12} sm={8} md={6}>
+        <Col xs={12} sm={8} smOffset={2} md={6} mdOffset={3}>
            <Input
               type='text'
-              ref='input'
               value={this.state.value}
               placeholder='Password'
               bsStyle={this.validationState()}
@@ -56,7 +54,7 @@ render() {
       </Row>
 
       <Row>
-        <Col  xs={12} sm={8} md={6}>
+        <Col xs={12} sm={8} smOffset={2} md={6} mdOffset={3}>
         <Button bsStyle='primary' bsSize='medium' block>Login</Button>
         </Col>
       </Row>
