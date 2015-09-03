@@ -19,7 +19,7 @@ var login = React.createClass({
 
   handleChange() {
     this.setState({
-      value: this.refs.input.getValue()
+      value: this.input.getValue()
     });
   },
 
