@@ -1,7 +1,7 @@
 var React = require('react'),
     Link = require('react-router').Link;
 
-var {Button, Input, Grid, Row, Col, Glyphicon} = require('react-bootstrap');
+var {Button, Input, Grid, Row, Col} = require('react-bootstrap');
 
 var signUp = React.createClass({
   getInitialState () {
