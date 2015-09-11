@@ -37,7 +37,7 @@ var home = React.createClass({
 
 render() {
   return (
-    <Grid>
+    <Grid fluid>
         {!this.state.clicked && (
           <Row>
             <Jumbotron>

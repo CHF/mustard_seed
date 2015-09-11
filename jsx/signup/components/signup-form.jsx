@@ -74,8 +74,8 @@ var signUp = React.createClass({
     let password = this.state.password;
     let confirmPassword = this.state.confirmPassword;
     let length = password.length;
-
-    if (length > 10){
+    //start counting when password is valid length
+    if (length > 7){
       if(confirmPassword === password){
       return 'success';
     } else {
@@ -104,8 +104,9 @@ validateEmail (event) {
 },
 
 render() {
+
   return (
-    <Grid className="inputForm">
+    <Grid fluid className="inputForm">
       <Row><Col smOffset={2} mdOffset={3}><h1>Sign Up</h1></Col></Row>
         <Row>
           <Col xs={6} sm={4} smOffset={2} md={3} mdOffset={3}>

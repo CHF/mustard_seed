@@ -12,20 +12,21 @@ var {Grid, Row, Col, Navbar, NavDropdown, NavItem, MenuItem, Nav} = require('rea
 var App = React.createClass({
 
   render() {
+    let settingsIcon = <i className="fa fa-cog fa-fw"/>;
+
     return (
       <html>
         <Head/>
         <body>
-          <Grid fluid={true}>
+          <Grid fluid>
             <Row>
               <Col xs={12}>
-
-                <Navbar brand={<a href='./home'>Mustard-Seed</a>} className="logo">
+                <Navbar fluid brand={<a href='./home'>Mustard-Seed</a>} className="logo">
                   <Nav navbar right>
-                    <NavItem eventKey={1} href='./signup'>Sign Up</NavItem>
-                    <NavItem eventKey={2} href='./login'>Login</NavItem>
-                    <NavItem eventKey={3} href='./profile'>Profile</NavItem>
-                    <NavDropdown eventKey={4} title='Settings'>
+                    <NavItem eventKey={1} href='./signup'><i className="fa fa-pencil fa-fw"/>&nbsp; SignUp</NavItem>
+                    <NavItem eventKey={2} href='./login'><i className="fa fa-key"/>&nbsp; Login</NavItem>
+                    <NavItem eventKey={3} href='./profile'><i className="fa fa-home"/>&nbsp; Profile</NavItem>
+                    <NavDropdown eventKey={4} title={settingsIcon}>
                       <MenuItem eventKey='1'>Privacy</MenuItem>
                       <MenuItem eventKey='2'>Notifications</MenuItem>
                       <MenuItem divider />
@@ -33,7 +34,6 @@ var App = React.createClass({
                     </NavDropdown>
                   </Nav>
                 </Navbar>
-
                 <Portal/>
               </Col>
             </Row>

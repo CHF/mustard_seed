@@ -45,7 +45,7 @@ var login = React.createClass({
 
 render() {
   return (
-    <Grid className="inputForm">
+    <Grid fluid className="inputForm">
       <Row><Col smOffset={2} mdOffset={3}><h1>Login</h1></Col></Row>
         <Row>
           <Col xs={12} sm={8} smOffset={2} md={6} mdOffset={3}>
